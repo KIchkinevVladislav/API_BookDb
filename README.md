@@ -20,7 +20,7 @@ REST API для сервиса ***BookDb**
 
 **JWT-токен** (Отправление confirmation_code на переданный email, получение JWT-токена в обмен на email и confirmation_code)
 
-[Полная документация API (redoc.yaml)](https://github.com/)
+[Полная документация API (redoc.yaml)](https://github.com/KIchkinevVladislav/API_BookDb/blob/main/static/redoc.yaml)
 
 При первом запуске для функционирования проекта обязательно выполнить миграции:
 
