@@ -1,0 +1,6 @@
+id,username,email,role,description,first_name,last_name
+100,bingobongo,bingobongo@bookdb.fake,user,,,
+101,capt_obvious,capt_obvious@bookdb.fake,admin,,,
+102,faust,faust@bookdb.fake,user,,,
+103,reviewer,reviewer@bookdb.fake,user,,,
+104,angry,angry@bookdb.fake,moderator,,,
