@@ -13,7 +13,6 @@ from .views import (
     CommentViewSet,
 )
 
-
 router = DefaultRouter()
 router.register(r'users', UserViewSet, basename="users")
 router.register(r'genres', GenreViewSet, basename='genres')
@@ -22,7 +21,6 @@ review_router = routers.NestedSimpleRouter(router, r'books', lookup='books')
 review_router.register(r'reviews', ReviewViewSet, basename='reviews')
 comment_router = routers.NestedSimpleRouter(review_router, r'reviews', lookup='review')
 comment_router.register(r'comments', CommentViewSet, basename='comment')
-
 
 urlpatterns = [
     path('v1/', include(router.urls)),
