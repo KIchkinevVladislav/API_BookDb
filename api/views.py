@@ -31,6 +31,7 @@ from .permissions import (
 )
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
+
 class RegisterView(generics.CreateAPIView):
     """
     A cconfirmation_code is sent to the mail received from the user
@@ -56,6 +57,7 @@ class RegisterView(generics.CreateAPIView):
             )
         return Response(serializer.data)
 
+    
 class TokenView(APIView):
     """
     Sending the generated token to the user
@@ -67,6 +69,7 @@ class TokenView(APIView):
         if serializer.is_valid(raise_exception=True):
             return Response({'token': serializer.validated_data['token']})
 
+        
 class UserViewSet(viewsets.ModelViewSet):
     """
     Viewset for working with users
@@ -94,6 +97,7 @@ class UserViewSet(viewsets.ModelViewSet):
             serializer = self.get_serializer(request.user, many=False)
             return Response(serializer.data)
 
+        
 class GenreViewSet(
     CreateModelMixin,
     ListModelMixin,
