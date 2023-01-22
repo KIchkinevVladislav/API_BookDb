@@ -20,12 +20,14 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
+
 def generate_code():
     """
     Code generation for confirmation_code.
     """
     random.seed()
     return str(random.randint(10000000, 99999999))   
+
 
 class RegisterSerializer(serializers.ModelSerializer):
     """
@@ -41,6 +43,7 @@ class RegisterSerializer(serializers.ModelSerializer):
         data['confirmation_code'] = confirmation_code
         return data
 
+    
 class TokenSerializer(serializers.ModelSerializer):
     """
     Serialization at user login.
@@ -66,6 +69,7 @@ class TokenSerializer(serializers.ModelSerializer):
             data['token'] = token
         return data
 
+    
 class UserSerializer(serializers.ModelSerializer):
     """ 
     Serializer for User model.
@@ -151,3 +155,4 @@ class CommentSerializer(serializers.ModelSerializer):
     class Meta:
         fields = ('id', 'text', 'author', 'pub_date',)
         model = Comment
+        
