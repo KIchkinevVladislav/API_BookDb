@@ -10,6 +10,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 from .models import User, Genre, Book, Review, Comment
 
+
 def get_tokens_for_user(user):
     """
     Creating a token for the user manually.
