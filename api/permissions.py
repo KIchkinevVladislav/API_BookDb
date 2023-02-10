@@ -12,6 +12,7 @@ class IsAdminUser(permissions.BasePermission):
         if request.user.is_authenticated:
             return request.user.is_superuser or request.user.role == 'admin'
 
+        
 class IsAdminOrReadOnly(permissions.BasePermission):
     """
     Restriction of rights. Actions are available only to the admin or django admin or only reading.
