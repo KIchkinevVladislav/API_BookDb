@@ -21,7 +21,6 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
-
 def generate_code():
     """
     Code generation for confirmation_code.
@@ -79,6 +78,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('email', 'username', 'bio', 'role', 'first_name', 'last_name',)
         model = User
 
+        
 class GenreSerializer(serializers.ModelSerializer):
     """ 
     Serializer for Genre model.
@@ -111,6 +111,7 @@ class BookSerializer(serializers.ModelSerializer):
                   'description', 'genre',)    
         model = Book   
 
+        
 class ReviewSerializer(serializers.ModelSerializer):
     """ 
     Serializer for Review model.
@@ -148,6 +149,7 @@ class ReviewSerializer(serializers.ModelSerializer):
         instance.save()
         return instance
 
+    
 class CommentSerializer(serializers.ModelSerializer):
     author = serializers.ReadOnlyField(source='author.username')
     """ 
