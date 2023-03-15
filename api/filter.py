@@ -2,6 +2,7 @@ from rest_framework import filters
 
 from .models import Genre
 
+
 class BookFilterBackend(filters.BaseFilterBackend):
     """
     Filter for BookViewSet
