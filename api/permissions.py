@@ -26,6 +26,7 @@ class IsAdminOrReadOnly(permissions.BasePermission):
         if request.user.is_authenticated:
             return request.user.is_superuser or request.user.role == 'admin'
 
+        
 class IsAuthorOrAdminOrModerator(permissions.BasePermission):
     """
     Restriction of rights. 
