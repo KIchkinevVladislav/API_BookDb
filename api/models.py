@@ -77,6 +77,7 @@ class Review(models.Model):
     def __str__(self):
         return f'ОТзыв от {self.author} на книгу {self.book}'
 
+    
 class Comment(models.Model):
     """
     Commetn Model.
@@ -93,16 +94,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return f'Комментарий от {self.author} к отзыву {self.review}'
-
-
-
-
-
-
-
-
-
-
-
-
-
