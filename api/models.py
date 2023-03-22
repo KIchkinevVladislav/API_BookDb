@@ -59,6 +59,7 @@ class Book(models.Model):
         verbose_name = 'Книга'
         verbose_name_plural = 'Книги'
 
+        
 class Review(models.Model):
     """
     Review Model.
