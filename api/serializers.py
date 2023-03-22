@@ -21,6 +21,7 @@ def get_tokens_for_user(user):
         'access': str(refresh.access_token),
     }
 
+
 def generate_code():
     """
     Code generation for confirmation_code.
