@@ -114,6 +114,7 @@ class GenreViewSet(
     search_fields = ['name']
     lookup_field = 'slug'
 
+    
 class BookViewSet(viewsets.ModelViewSet):
     """
     CRUD for Book
