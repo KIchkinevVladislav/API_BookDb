@@ -1,6 +1,5 @@
 from rest_framework import permissions
 
-
 class IsAdminUser(permissions.BasePermission):
     """
     Restriction of rights. Actions are available only to the admin or django admin.
