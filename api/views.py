@@ -6,7 +6,6 @@ from rest_framework import viewsets, filters, permissions, generics, pagination
 from rest_framework.views import APIView
 from rest_framework.decorators import action
 from django.core.mail import send_mail
-
 from .models import User, Genre, Book, Review, Comment
 
 from rest_framework.mixins import (
