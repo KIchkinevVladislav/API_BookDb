@@ -7,6 +7,7 @@ from rest_framework.exceptions import (
 )
 from django.shortcuts import get_object_or_404
 from rest_framework_simplejwt.tokens import RefreshToken
+
 from .models import User, Genre, Book, Review, Comment
 
 
